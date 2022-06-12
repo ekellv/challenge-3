@@ -42,7 +42,8 @@ function generatePassword() {
     var uppercaseChoice = confirm("Would you like to use uppercase letters in your password?");
     var numbersChoice = confirm("Would you like to use numbers in your password?");
     var symbolsChoice = confirm("Would you like to use symbols in your password?");
-      //
+      // a loop when user doesn't choose at least one of the elements to include in their password
+      // without these variables and this loop, the application will return "undefined" which is confusing for the user
       while (!lowercaseChoice && !uppercaseChoice && !numbersChoice && !symbolsChoice) {
         alert("You must choose at least one password element to create your password.")
         var lowercaseChoice = confirm("Would you like to use lowercase letters in your password?");
@@ -51,6 +52,10 @@ function generatePassword() {
         var symbolsChoice = confirm("Would you like to use symbols in your password?");
       }
     
+    // declaring the empty array to be filled with user's choices from the arrays already declared above the function
+    passwordChoices = [];
+    // concatenating all the choices the user did (or didn't) make from the confirmation prompts above
+    // if the user chooses lowercase letters, the lowercase array will be concatenated into previously undefined passwordChoices array
     if (lowercaseChoice) {
       passwordChoices = passwordChoices.concat(lowercase);
     }
@@ -67,11 +72,13 @@ function generatePassword() {
       passwordChoices = passwordChoices.concat(symbols);
     }
  
-
+    // delcaring undefined variable in order to appropriately fill it with user's choices
     var password = "";
 
+    // randomizing the user's choices with a loop using random characters from the passwordChoices array 
     for (var i = 0; i < userLength; i++) {
     var randomCharacters = Math.floor(Math.random() * passwordChoices.length);
+    //taking the undefined password variable and filling it with those now randomized choices
     password = password + passwordChoices[randomCharacters];
     }
     return password;
