@@ -2,6 +2,8 @@ This is a random password generator created using javascript. When the user clic
 
 Once the password length and elements are chosen, the application will condense all of those choices into an array and randomize them to actually create the new password. Once the password is created, it will be displayed on the webpage in the ReadOnly box from the HTML file. 
 
-Some starter code was provided, however the functionality of the password generator was constructed by me. I used two separate functions in javascript, one to define the password choices and randomize them in the password, then another to call this funcation and display the newly created password on the webpage.  
+Some starter code was provided, however the functionality of the password generator was constructed by me. I used two separate functions in javascript, one to define the password choices and randomize them in the password, then another to call this funcation and display the newly created password on the webpage. 
+
+https://ekellv.github.io/javascript-random-password-generator-MSUBootcamp-Challenge-3/
 
 ![image](https://user-images.githubusercontent.com/103372188/173248477-692402fb-89a3-4ec5-9ebc-62a8212078d2.png)
