@@ -45,7 +45,7 @@ function generatePassword() {
       // a loop when user doesn't choose at least one of the elements to include in their password
       // without these variables and this loop, the application will return "undefined" which is confusing for the user
       while (!lowercaseChoice && !uppercaseChoice && !numbersChoice && !symbolsChoice) {
-        alert("You must choose at least one password element to create your password.")
+        alert("You must choose at least one password element to create your password.");
         var lowercaseChoice = confirm("Would you like to use lowercase letters in your password?");
         var uppercaseChoice = confirm("Would you like to use uppercase letters in your password?");
         var numbersChoice = confirm("Would you like to use numbers in your password?");
